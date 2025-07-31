@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 
 const DetectivePage: React.FC = () => {
   const [currentText, setCurrentText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showButton, setShowButton] = useState(false);
   
-  const texts = [
+  const texts = useMemo(() => [
     "You were lured here for a reason.",
     "You cracked the first clue. Now it's time to uncover the full mystery."
-  ];
+  ], []);
 
   useEffect(() => {
     if (currentIndex < texts.length) {
@@ -34,7 +34,7 @@ const DetectivePage: React.FC = () => {
 
       return () => clearInterval(typeInterval);
     }
-  }, [currentIndex]);
+  }, [currentIndex, texts]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-amber-900 via-yellow-800 to-amber-900 flex flex-col items-center justify-center px-4 py-8 relative overflow-hidden">

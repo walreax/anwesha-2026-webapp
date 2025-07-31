@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 
 const HackerPage: React.FC = () => {
   const [lines, setLines] = useState<string[]>([]);
@@ -6,7 +6,7 @@ const HackerPage: React.FC = () => {
   const [currentText, setCurrentText] = useState('');
   const [showButton, setShowButton] = useState(false);
   
-  const hackerLines = [
+  const hackerLines = useMemo(() => [
     "> Initializing trace protocol...",
     "> You have been traced...",
     "> Location: IIT Patna",
@@ -14,7 +14,7 @@ const HackerPage: React.FC = () => {
     "> Analyzing behavioral patterns...",
     "> Verdict: Candidate for India's craziest fest.",
     "> Access granted to Anwesha Protocol."
-  ];
+  ], []);
 
   useEffect(() => {
     if (currentLineIndex < hackerLines.length) {
@@ -41,7 +41,7 @@ const HackerPage: React.FC = () => {
 
       return () => clearInterval(typeInterval);
     }
-  }, [currentLineIndex]);
+  }, [currentLineIndex, hackerLines]);
 
   return (
     <div className="min-h-screen bg-black flex flex-col items-center justify-center px-4 py-8 font-mono relative overflow-hidden">
