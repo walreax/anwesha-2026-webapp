@@ -8,7 +8,7 @@ const RevealPage: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-black flex flex-col items-center justify-center px-4 py-8">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-black flex flex-col items-center justify-center px-4 py-8">
       <div className="max-w-4xl mx-auto text-center space-y-8">
         {/* Main Text */}
         <div
@@ -19,7 +19,7 @@ const RevealPage: React.FC = () => {
           }`}
         >
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            Oops! You just fell for our trap…
+            Welcome to Anwesha 2026
           </h1>
         </div>
 
@@ -32,11 +32,11 @@ const RevealPage: React.FC = () => {
           }`}
         >
           <p className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed">
-            But hey, good things come to those who are curious 😉
+            Curiosity brought you here. Let's make it worth your while �
           </p>
         </div>
 
-        {/* GIF */}
+        {/* Professional Logo/Icon */}
         <div
           className={`transform transition-all duration-1000 ease-out delay-500 ${
             isVisible 
@@ -45,12 +45,9 @@ const RevealPage: React.FC = () => {
           }`}
         >
           <div className="relative mx-auto mb-12 max-w-md">
-            <img
-              src="https://media.giphy.com/media/kHs1lBhZWaK5rj7lt3/giphy.gif"
-              alt="Funny Office reaction"
-              className="w-full h-auto rounded-2xl shadow-2xl border-4 border-gray-800"
-              loading="lazy"
-            />
+            <div className="w-48 h-48 mx-auto bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-6xl text-white shadow-2xl">
+              🎭
+            </div>
           </div>
         </div>
 
@@ -66,15 +63,11 @@ const RevealPage: React.FC = () => {
             href="https://www.instagram.com/anwesha_iitpatna?igsh=NzQ1dng4NWZxdzFk"
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative inline-flex items-center justify-center px-12 py-4 text-lg font-semibold text-black bg-white rounded-full shadow-2xl hover:shadow-white/20 transform transition-all duration-300 ease-out hover:scale-105 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-white/30 animate-bounce hover:animate-none"
+            className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl shadow-lg hover:shadow-blue-500-30 transform transition-all duration-300 ease-out hover:scale-105 hover:from-blue-500 hover:to-purple-500 focus:outline-none focus:ring-4 focus:ring-blue-500-30 border border-blue-500 no-underline"
+            style={{ textDecoration: 'none' }}
           >
-            <span className="relative z-10">🎭 Enter the Mystery</span>
-            
-            {/* Hover effect overlay */}
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-            
-            {/* Ripple effect on click */}
-            <div className="absolute inset-0 rounded-full bg-white opacity-0 group-active:opacity-30 transform scale-0 group-active:scale-100 transition-all duration-200"></div>
+            <span className="mr-2">🎭</span>
+            <span>Experience Anwesha</span>
           </a>
         </div>
 

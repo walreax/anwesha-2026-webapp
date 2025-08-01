@@ -94,7 +94,7 @@ const SpinnerQuizPage: React.FC = () => {
           }
         `}
       </style>
-      <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 flex flex-col items-center justify-center px-4 py-8">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-800 to-slate-900 flex flex-col items-center justify-center px-4 py-8">
       <div className="max-w-4xl mx-auto text-center space-y-8">
         {/* Title */}
         <div className="space-y-4">
@@ -181,9 +181,11 @@ const SpinnerQuizPage: React.FC = () => {
               href="https://www.instagram.com/anwesha_iitpatna?igsh=NzQ1dng4NWZxdzFk"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative inline-flex items-center justify-center px-12 py-4 text-xl font-bold text-white bg-gradient-to-r from-green-500 to-blue-600 rounded-full shadow-2xl hover:shadow-green-500/30 transform transition-all duration-300 ease-out hover:scale-105 hover:from-green-600 hover:to-blue-700 focus:outline-none focus:ring-4 focus:ring-green-500/30"
+              className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl shadow-lg hover:shadow-blue-500-30 transform transition-all duration-300 ease-out hover:scale-105 hover:from-blue-500 hover:to-purple-500 focus:outline-none focus:ring-4 focus:ring-blue-500-30 border border-blue-500 no-underline"
+              style={{ textDecoration: 'none' }}
             >
-              <span className="relative z-10">🎪 Join Your Tribe</span>
+              <span className="mr-2">🎪</span>
+              <span>Join Your Tribe</span>
             </a>
           </div>
         )}

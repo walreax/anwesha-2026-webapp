@@ -44,44 +44,44 @@ const HackerPage: React.FC = () => {
   }, [currentLineIndex, hackerLines]);
 
   return (
-    <div className="min-h-screen bg-black flex flex-col items-center justify-center px-4 py-8 font-mono relative overflow-hidden">
-      {/* Matrix-like background effect */}
-      <div className="absolute inset-0 bg-gradient-to-b from-green-900/10 to-black opacity-50"></div>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 flex flex-col items-center justify-center px-4 py-8 font-mono relative overflow-hidden">
+      {/* Subtle background effect */}
+      <div className="absolute inset-0 bg-gradient-to-b from-green-900-10 to-transparent opacity-30"></div>
       
-      <div className="max-w-4xl mx-auto w-full space-y-4 relative z-10">
+      <div className="max-w-4xl mx-auto w-full space-y-6 relative z-10">
         {/* Terminal Window */}
-        <div className="bg-gray-900 rounded-lg border border-green-500/30 shadow-2xl overflow-hidden">
+        <div className="bg-gray-900 rounded-xl border border-gray-700 shadow-2xl overflow-hidden backdrop-blur-sm">
           {/* Terminal Header */}
-          <div className="bg-gray-800 px-4 py-2 flex items-center space-x-2 border-b border-green-500/30">
+          <div className="bg-gray-800 px-6 py-3 flex items-center space-x-3 border-b border-gray-700">
             <div className="w-3 h-3 bg-red-500 rounded-full"></div>
             <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
             <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-            <span className="text-green-400 text-sm ml-4">ANWESHA_TRACE_PROTOCOL.exe</span>
+            <span className="text-gray-300 text-sm ml-4 font-semibold">ANWESHA_TRACE_PROTOCOL.exe</span>
           </div>
           
           {/* Terminal Content */}
-          <div className="p-6 min-h-[400px] space-y-2">
+          <div className="p-8 min-h-400 space-y-3 bg-black">
             {lines.map((line, index) => (
-              <div key={index} className="text-green-400 text-lg animate-pulse">
+              <div key={index} className="text-green-400 text-lg font-mono">
                 {line}
               </div>
             ))}
             
             {currentText && (
-              <div className="text-green-400 text-lg">
+              <div className="text-green-400 text-lg font-mono">
                 {currentText}
-                <span className="animate-pulse">_</span>
+                <span className="animate-pulse text-white">|</span>
               </div>
             )}
             
-            {/* Glitch Effect */}
-            <div className="text-green-400 opacity-20 absolute top-20 left-10 animate-ping">
-              01001000 01100001 01100011 01101011 01100101 01110010
+            {/* Subtle decorative elements */}
+            <div className="text-green-500 opacity-20 absolute top-32 right-8 text-xs font-mono">
+              [SYSTEM_ACTIVE]
             </div>
           </div>
         </div>
 
-        {/* Hacker Button */}
+        {/* Professional Button */}
         <div
           className={`text-center transform transition-all duration-1000 ease-out ${
             showButton 
@@ -93,25 +93,17 @@ const HackerPage: React.FC = () => {
             href="https://www.instagram.com/anwesha_iitpatna?igsh=NzQ1dng4NWZxdzFk"
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative inline-flex items-center justify-center px-12 py-4 text-lg font-bold text-black bg-red-500 rounded-lg shadow-2xl hover:shadow-red-500/50 transform transition-all duration-300 ease-out hover:scale-105 hover:bg-red-600 focus:outline-none focus:ring-4 focus:ring-red-500/30 border-2 border-red-600"
-            style={{
-              filter: showButton ? 'drop-shadow(0 0 30px rgba(239, 68, 68, 0.8))' : 'none',
-              textShadow: '0 0 10px rgba(0, 0, 0, 0.8)'
-            }}
+            className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-green-600 to-emerald-600 rounded-xl shadow-lg hover:shadow-green-500-30 transform transition-all duration-300 ease-out hover:scale-105 hover:from-green-500 hover:to-emerald-500 focus:outline-none focus:ring-4 focus:ring-green-500-30 border border-green-500 no-underline"
+            style={{ textDecoration: 'none' }}
           >
-            <span className="relative z-10">⚡ UNVEIL THE MAGIC</span>
-            
-            {/* Red glow effect */}
-            <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-red-500 to-red-600 opacity-0 group-hover:opacity-40 transition-opacity duration-300 animate-pulse"></div>
+            <span className="mr-2">🚀</span>
+            <span>Explore Anwesha</span>
           </a>
         </div>
 
-        {/* Decorative hacker elements */}
-        <div className="absolute top-5 right-5 text-green-400 text-xs opacity-30 animate-pulse">
-          [TRACE_COMPLETE]
-        </div>
-        <div className="absolute bottom-5 left-5 text-green-400 text-xs opacity-30 animate-ping">
-          [SYSTEM_BREACH_DETECTED]
+        {/* Clean decorative elements */}
+        <div className="absolute top-8 right-8 text-gray-500 text-xs opacity-50 font-mono">
+          [AUTHENTICATED]
         </div>
       </div>
     </div>

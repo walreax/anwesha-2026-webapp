@@ -8,7 +8,7 @@ const NotScamPage: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-yellow-300 via-pink-300 to-yellow-400 flex flex-col items-center justify-center px-4 py-8">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-800 to-slate-900 flex flex-col items-center justify-center px-4 py-8 relative">
       <div className="max-w-4xl mx-auto text-center space-y-8">
         {/* Main Text */}
         <div
@@ -18,7 +18,7 @@ const NotScamPage: React.FC = () => {
               : 'translate-y-8 opacity-0'
           }`}
         >
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
             You really scanned that? Wow. 
             <br />
             We admire the confidence.
@@ -33,10 +33,10 @@ const NotScamPage: React.FC = () => {
               : 'translate-y-8 opacity-0'
           }`}
         >
-          <p className="text-2xl md:text-3xl text-gray-700 mb-12 leading-relaxed font-medium">
+          <p className="text-2xl md:text-3xl text-gray-300 mb-12 leading-relaxed font-medium">
             Don't worry, we won't judge you. 
             <br />
-            <span className="text-pink-600 font-bold">Anwesha wants you.</span>
+            <span className="text-blue-400 font-bold">Anwesha wants you.</span>
           </p>
         </div>
 
@@ -52,7 +52,7 @@ const NotScamPage: React.FC = () => {
             <img
               src="https://media.giphy.com/media/6nWhy3ulBL7GSuGrIZ/giphy.gif"
               alt="Surprised Pikachu meme"
-              className="w-full h-auto rounded-2xl shadow-2xl border-4 border-white"
+              className="w-full h-auto rounded-2xl shadow-2xl border-4 border-gray-600"
               loading="lazy"
             />
           </div>
@@ -70,20 +70,19 @@ const NotScamPage: React.FC = () => {
             href="https://www.instagram.com/anwesha_iitpatna?igsh=NzQ1dng4NWZxdzFk"
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative inline-flex items-center justify-center px-12 py-4 text-xl font-bold text-white bg-gradient-to-r from-pink-500 to-purple-600 rounded-full shadow-2xl hover:shadow-pink-500/30 transform transition-all duration-300 ease-out hover:scale-105 hover:from-pink-600 hover:to-purple-700 focus:outline-none focus:ring-4 focus:ring-pink-500/30 animate-bounce hover:animate-none"
+            className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl shadow-lg hover:shadow-blue-500-30 transform transition-all duration-300 ease-out hover:scale-105 hover:from-blue-500 hover:to-purple-500 focus:outline-none focus:ring-4 focus:ring-blue-500-30 border border-blue-500 no-underline"
+            style={{ textDecoration: 'none' }}
           >
-            <span className="relative z-10">🎪 Embrace the Chaos</span>
-            
-            {/* Rainbow hover effect */}
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-red-400 via-yellow-400 via-green-400 via-blue-400 to-purple-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300 animate-pulse"></div>
+            <span className="mr-2">🎪</span>
+            <span>Embrace the Chaos</span>
           </a>
         </div>
 
         {/* Decorative elements */}
-        <div className="absolute top-10 left-10 text-6xl animate-bounce delay-1000">🎉</div>
-        <div className="absolute top-20 right-16 text-4xl animate-pulse delay-500">✨</div>
-        <div className="absolute bottom-16 left-20 text-5xl animate-bounce delay-700">🎊</div>
-        <div className="absolute bottom-32 right-12 text-3xl animate-pulse delay-300">🌟</div>
+        <div className="absolute top-10 left-10 text-6xl opacity-50">🎉</div>
+        <div className="absolute top-20 right-16 text-4xl opacity-50">✨</div>
+        <div className="absolute bottom-16 left-20 text-5xl opacity-50">🎊</div>
+        <div className="absolute bottom-32 right-12 text-3xl opacity-50">🌟</div>
       </div>
     </div>
   );

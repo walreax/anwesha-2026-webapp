@@ -134,7 +134,8 @@ const WhatsAppForwardPage: React.FC = () => {
               href="https://www.instagram.com/anwesha_iitpatna?igsh=NzQ1dng4NWZxdzFk"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-6 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg inline-block text-center"
+              className="w-full bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-6 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg inline-block text-center no-underline"
+              style={{ textDecoration: 'none' }}
             >
               🦠 Accept the Virus
             </a>

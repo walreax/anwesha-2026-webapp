@@ -26,18 +26,18 @@ const FakeBiryaniApp: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center px-4 py-8 relative">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-800 to-slate-900 flex flex-col items-center justify-center px-4 py-8 relative">
       {/* Fake App Store Layout */}
       <div className="max-w-md mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden">
         {/* App Header */}
-        <div className="bg-gradient-to-r from-orange-500 to-red-500 p-6 text-white">
+        <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-6 text-white">
           <div className="flex items-center space-x-4">
             <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center text-4xl">
               🍛
             </div>
             <div>
               <h1 className="text-2xl font-bold">IITP Free Biryani</h1>
-              <p className="text-orange-100">Food & Drink</p>
+              <p className="text-blue-100">Food & Drink</p>
             </div>
           </div>
         </div>
@@ -88,7 +88,8 @@ const FakeBiryaniApp: React.FC = () => {
           {/* Download Button */}
           <button
             onClick={handleDownload}
-            className="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-6 rounded-full transition-colors duration-200 flex items-center justify-center space-x-2"
+            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-full transition-colors duration-200 flex items-center justify-center space-x-2 no-underline"
+            style={{ textDecoration: 'none' }}
           >
             <Download className="w-5 h-5" />
             <span>Install</span>
@@ -98,7 +99,7 @@ const FakeBiryaniApp: React.FC = () => {
           {downloadProgress > 0 && downloadProgress < 100 && (
             <div className="w-full bg-gray-200 rounded-full h-2">
               <div 
-                className="bg-blue-500 h-2 rounded-full transition-all duration-300"
+                className="bg-blue-600 h-2 rounded-full transition-all duration-300"
                 style={{ width: `${downloadProgress}%` }}
               ></div>
             </div>
@@ -161,7 +162,8 @@ const FakeBiryaniApp: React.FC = () => {
               href="https://www.instagram.com/anwesha_iitpatna?igsh=NzQ1dng4NWZxdzFk"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold py-4 px-6 rounded-full transition-all duration-300 transform hover:scale-105 inline-block text-center"
+              className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-6 rounded-full transition-all duration-300 transform hover:scale-105 inline-block text-center no-underline"
+              style={{ textDecoration: 'none' }}
             >
               🎪 Taste the Real Deal
             </a>

@@ -8,7 +8,7 @@ const MemePosterPage: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white flex flex-col items-center justify-center px-4 py-8">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex flex-col items-center justify-center px-4 py-8">
       <div className="max-w-4xl mx-auto text-center space-y-8">
         {/* Top Text */}
         <div
@@ -18,7 +18,7 @@ const MemePosterPage: React.FC = () => {
               : 'translate-y-8 opacity-0'
           }`}
         >
-          <h1 className="text-3xl md:text-5xl font-bold text-black mb-8 uppercase tracking-wide">
+          <h1 className="text-3xl md:text-5xl font-bold text-white mb-8 uppercase tracking-wide">
             Expectation: Free Pizza
           </h1>
         </div>
@@ -59,7 +59,7 @@ const MemePosterPage: React.FC = () => {
               : 'translate-y-8 opacity-0'
           }`}
         >
-          <h2 className="text-3xl md:text-5xl font-bold text-black mb-8 uppercase tracking-wide">
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-8 uppercase tracking-wide">
             Reality: Anwesha 2026 – a feast for your soul
           </h2>
         </div>
@@ -76,9 +76,11 @@ const MemePosterPage: React.FC = () => {
             href="https://www.instagram.com/anwesha_iitpatna?igsh=NzQ1dng4NWZxdzFk"
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative inline-flex items-center justify-center px-12 py-4 text-lg font-semibold text-white bg-red-600 rounded-full shadow-2xl hover:shadow-red-600/30 transform transition-all duration-300 ease-out hover:scale-105 hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-600/30"
+            className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl shadow-lg hover:shadow-purple-500-30 transform transition-all duration-300 ease-out hover:scale-105 hover:from-purple-500 hover:to-pink-500 focus:outline-none focus:ring-4 focus:ring-purple-500-30 border border-purple-500 no-underline"
+            style={{ textDecoration: 'none' }}
           >
-            <span className="relative z-10">🎨 Join the Chaos</span>
+            <span className="mr-2">🎨</span>
+            <span>Join the Chaos</span>
           </a>
         </div>
       </div>
